@@ -15,23 +15,16 @@ int main(){
     cin >> a[i];
     last[a[i]] = i;
   }
-
-  bool first = true;
-
   for(int i = 1;i<=n;i++){
     if(last[p[i]] == 0){
-      if(!first) cout << " ";
-      cout << p[i];
-      first = false;
+      cout << p[i] << " ";
     }
   }
   for(int i = 1;i<=q;i++){
     if(last[a[i]] == i){
-      if(!first) cout << " ";
-      cout << a[i];
-      first = false;
+      cout << a[i] << " ";
     }
   }
-  cout << "\n";
+  cout << endl;
   return 0;
 }
